@@ -102,18 +102,20 @@ export default function App() {
             <Col md="9">
               <br />
               <div align="center">           
-              <h1 className="tummanharmaa">Rainbits - sataako Jyväskylässä</h1> 
+              <h7 className="tummanharmaa">Rainbits - sataako Jyväskylässä</h7> 
               </div>          
             </Col>
           </Row>
           <Row>
             <Col md="9">
               <br />
-              <div align="center">     
-              <Alert key="light" variant="light">
+              <div align="left">     
+              <Alert key="light" variant="light" width="60%">
                 <i className="bi bi-cloud-check-fill pinkki" title="ei sada">  ei sada</i>
+                <br />
                 <i className="bi bi-cloud-drizzle-fill pinkki" title="ei sada">  mahdollisesti vähäistä sadetta </i>
-                <i className="bi bi-cloud-hail-fill pinkki" title="ei sada"> sadetta</i>
+                <br />
+                <i className="bi bi-cloud-hail-fill pinkki" title="ei sada"> sadetta</i><br />
                 <i className="bi bi-cloud-rain-heavy-fill pinkki" title="ei sada">  kaatosadetta</i>
               </Alert>
               </div>      

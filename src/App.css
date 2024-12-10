@@ -83,6 +83,9 @@ hr.hr-text::before {
 h1 {
   margin-left: 10px;
 }
+h7 {
+  letter-spacing: 0.6cap;
+}
 
 img {
   width: 25px;
