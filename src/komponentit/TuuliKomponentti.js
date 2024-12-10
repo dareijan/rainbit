@@ -14,7 +14,6 @@ import klo9 from "../kuvat/klo9.PNG";
 import klo10 from "../kuvat/klo10.PNG";
 import klo11 from "../kuvat/klo11.PNG";
 import klo12 from "../kuvat/klo12.PNG";
-import Alert from 'react-bootstrap/Alert';
 
 
 const TuuliKomponentti = ({ data }) => {
@@ -39,7 +38,6 @@ const TuuliKomponentti = ({ data }) => {
                       {/* kellonaika*/}
                       <span className="harmaa">{index===2 && (cell.endsWith("NaN")) ? cell.substring(0,5):"" }</span>
                       <h1 class="display-4">   
-                        
                       {/* sadeton pilvi*/}
                       {index===2 && (cell.endsWith("NaN")) ? <i className="bi bi-cloud-check-fill pinkki" title={cell}></i>:""}   
                       {/* ripsii*/}
@@ -78,6 +76,7 @@ const TuuliKomponentti = ({ data }) => {
 
                       {/* 18:00 väliviiva */}
                       {cell==='18:00'? <hr className="hr-text" data-content="18:00"></hr> : ""}
+
                     </span>
 
                   </Col>

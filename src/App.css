@@ -38,7 +38,7 @@
 }
 
 .harmaa {
-  color:  #ede8ee;
+  color:  #ded6e0;
 }
 
 .violetti {
@@ -50,21 +50,21 @@
 }
 
 .tummanharmaa {
-  color: dimgrey;;
+  color: darkgrey;
 }
 
 hr.hr-text {
   position: relative;
   border: none;
   height: 12px;
-  background:  #ede8ee;
+  background:  #ded6e0;
 }
 
 hr.hr-text-aamu {
   position: relative;
   border: none;
   height: 12px;
-  background:  #ede8ee;
+  background:  #ded6e0;
 }
 
 hr.hr-text::before {
