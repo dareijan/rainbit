@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import axios from 'axios';
-import Pagination from "react-bootstrap/Pagination";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import "bootstrap-icons/font/bootstrap-icons.css";
+import Alert from "react-bootstrap/Alert";
 
 import TuuliKomponentti from './komponentit/TuuliKomponentti'
 const apibase =   'https://opendata.fmi.fi/wfs?service=WFS&version=2.0.0&request=getFeature&storedquery_id=fmi::forecast::edited::weather::scandinavia::point::timevaluepair&place=Jyväskylä&parameters=PrecipitationAmount'
@@ -97,19 +97,30 @@ export default function App() {
 
     return (
     <div>
-      <div className="p-3 bs-dark-border-subtle border -bs-primary-border-subtle"  align="center">   
         <Container>
           <Row>
             <Col md="9">
+              <br />
               <div align="center">           
-              <h1>Windbits - sataako Jyväskylässä - </h1> 
+              <h1 className="tummanharmaa">Rainbits - sataako Jyväskylässä</h1> 
               </div>          
             </Col>
           </Row>
-          <br />
+          <Row>
+            <Col md="9">
+              <br />
+              <div align="center">     
+              <Alert key="light" variant="light">
+                <i className="bi bi-cloud-check-fill pinkki" title="ei sada">  ei sada</i>
+                <i className="bi bi-cloud-drizzle-fill pinkki" title="ei sada">  mahdollisesti vähäistä sadetta </i>
+                <i className="bi bi-cloud-hail-fill pinkki" title="ei sada"> sadetta</i>
+                <i className="bi bi-cloud-rain-heavy-fill pinkki" title="ei sada">  kaatosadetta</i>
+              </Alert>
+              </div>      
+            </Col>
+          </Row>          
 
         </Container>
-      </div>
       <TuuliKomponentti data={state.data} />
     </div>
   );
