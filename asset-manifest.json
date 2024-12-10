@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/rainbit/static/css/main.c46bd778.css",
-    "main.js": "/rainbit/static/js/main.2757bc20.js",
+    "main.css": "/rainbit/static/css/main.5288aec0.css",
+    "main.js": "/rainbit/static/js/main.15ab0b62.js",
     "static/js/488.c2b722f3.chunk.js": "/rainbit/static/js/488.c2b722f3.chunk.js",
     "static/media/bootstrap-icons.woff?": "/rainbit/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
     "static/media/bootstrap-icons.woff2?": "/rainbit/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
@@ -18,12 +18,12 @@
     "static/media/klo3.PNG": "/rainbit/static/media/klo3.2016a60f9289dc9abbef.PNG",
     "static/media/klo12.PNG": "/rainbit/static/media/klo12.10e7f161cb1f08f9e29b.PNG",
     "index.html": "/rainbit/index.html",
-    "main.c46bd778.css.map": "/rainbit/static/css/main.c46bd778.css.map",
-    "main.2757bc20.js.map": "/rainbit/static/js/main.2757bc20.js.map",
+    "main.5288aec0.css.map": "/rainbit/static/css/main.5288aec0.css.map",
+    "main.15ab0b62.js.map": "/rainbit/static/js/main.15ab0b62.js.map",
     "488.c2b722f3.chunk.js.map": "/rainbit/static/js/488.c2b722f3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c46bd778.css",
-    "static/js/main.2757bc20.js"
+    "static/css/main.5288aec0.css",
+    "static/js/main.15ab0b62.js"
   ]
 }
