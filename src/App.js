@@ -10,6 +10,8 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import Alert from "react-bootstrap/Alert";
 
 import TuuliKomponentti from './komponentit/TuuliKomponentti'
+import TuuliKomponenttiEnnustus from './komponentit/TuuliKomponenttiEnnustus'
+
 const apibase =   'https://opendata.fmi.fi/wfs?service=WFS&version=2.0.0&request=getFeature&storedquery_id=fmi::forecast::edited::weather::scandinavia::point::timevaluepair&place=Jyväskylä&parameters=Precipitation1h'
 
 //#endregion
@@ -60,7 +62,7 @@ export default function App() {
 
           var huomenna = 0;
           var paivamaarateksti = '';
-          if(state.saadata1.length <= 24) {
+          if(state.saadata1.length <= 20) {
 
             if (poissuljettavat_yön_ajat.indexOf(uusiaika) < 0) {  
               lkm++;
@@ -73,7 +75,7 @@ export default function App() {
                 //paivamaarateksti = kokonainenaika[0];
                 huomenna = 1;
               }
-              if (lkm <= 24) {
+              if (lkm <= 20) {
                 value = uusiaika +"-"+value;
                 setState({saadata1: state.saadata1.push({uusiaika, paivamaarateksti, value})});
                 setState({data: state.data.push({uusiaika, paivamaarateksti, value})});              
@@ -103,13 +105,12 @@ export default function App() {
             <Col md="9">
               <br />
               <div align="center">           
-              <h7 className="tummanharmaa">Rainbits - sataako Jyväskylässä</h7> 
+              <h6 className="violetti">Rainbit - sataako Jyväskylässä</h6> 
               </div>          
             </Col>
           </Row>
         </Container>
-      <TuuliKomponentti data={state.data} />
-      <Container>
+        <Container>
           <Row>
             <Col md="9">
               <br />
@@ -126,7 +127,10 @@ export default function App() {
               </div>      
             </Col>
           </Row>
-        </Container>
+        </Container>              
+      <TuuliKomponentti data={state.data} />
+      <TuuliKomponenttiEnnustus data={state.data} />
+
     </div>
   );
 };

@@ -47,14 +47,18 @@
 }
 
 .lila {
-  color: #887ce4;
+  color: #b094eb;
 /*
   color: pink;
   */
 }
 
 .tummanharmaa {
-  color: darkgrey;
+  color: rgb(195, 187, 194);
+}
+
+.haaleanharmaa {
+  color: rgb(198, 197, 198);
 }
 
 hr.hr-text {

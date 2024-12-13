@@ -16,9 +16,9 @@ import klo11 from "../kuvat/klo11.PNG";
 import klo12 from "../kuvat/klo12.PNG";
 
 
-const TuuliKomponentti = ({ data }) => {
-    var sliceddata = data.slice(0, data.length - 15);
-    const rows = sliceddata.map(item => Object.values(item));
+const TuuliKomponenttiEnnustus = ({ data }) => {
+  var sliceddata = data.slice(data.length - 15, data.length);
+  const rows = sliceddata.map(item => Object.values(item));
 
     return (
 
@@ -41,7 +41,7 @@ const TuuliKomponentti = ({ data }) => {
                       <h1 class="display-3">  
 
                       {/* sadeton pilvi*/}
-                      {index===2 && (cell.endsWith("NaN") || (cell.substring(6,9)=='0.0')) ? <i className="bi bi-cloud-check-fill lila" title={cell}></i>:""}  
+                      {index===2 && (cell.endsWith("NaN") || (cell.substring(6,9)=='0.0')) ? <i className="bi bi-cloud-check-fill haaleanharmaa" title={cell}></i>:""}  
                       
                       {/* ripsii*/}                      
                       {index===2 && !cell.endsWith("NaN") && ((cell.substring(6,9)=='0.1') || 
@@ -52,7 +52,7 @@ const TuuliKomponentti = ({ data }) => {
                       (cell.substring(6,9)=='0.6') ||
                       (cell.substring(6,9)=='0.7')||
                       (cell.substring(6,9)=='0.8')||
-                      (cell.substring(6,9)=='0.9')) ? <i className="bi bi-cloud-drizzle-fill lila" title={cell}></i>:""}
+                      (cell.substring(6,9)=='0.9')) ? <i className="bi bi-cloud-drizzle-fill haaleanharmaa" title={cell}></i>:""}
 
                       {/* sataa*/}
                       {index===2 && !cell.endsWith("NaN") && (
@@ -61,14 +61,14 @@ const TuuliKomponentti = ({ data }) => {
                       (cell.substring(6,8)=='3.') || 
                       (cell.substring(6,8)=='4.') ||
                       (cell.substring(6,8)=='5.') ||
-                      (cell.substring(6,8)=='6.'))) ? <i className="bi bi-cloud-hail-fill lila" title={cell}></i>:""}   
+                      (cell.substring(6,8)=='6.'))) ? <i className="bi bi-cloud-hail-fill haaleanharmaa" title={cell}></i>:""}   
 
                       {/* sataa kaatamalla*/}
                       {index===2 && !cell.endsWith("NaN") && ((cell.substring(6,8)=='2.') || 
                       (cell.substring(6,8)=='7.') || 
                       (cell.substring(6,8)=='8.') ||
                       (cell.substring(6,8)=='9.') ||
-                      (cell.substring(6,8)=='10.')) ? <i className="bi bi-cloud-rain-heavy-fill lila" title={cell}></i>:""}                               
+                      (cell.substring(6,8)=='10.')) ? <i className="bi bi-cloud-rain-heavy-fill haaleanharmaa" title={cell}></i>:""}                               
 
                       {/* Otsikko päivämääräteksti*/}
                       {cell==='12:00'? <hr className="hr-text" data-content="12:00"></hr> : ""}
@@ -111,4 +111,4 @@ const TuuliKomponentti = ({ data }) => {
     );
   };
   
-  export default TuuliKomponentti;
+  export default TuuliKomponenttiEnnustus;
