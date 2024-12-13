@@ -42,11 +42,15 @@
 }
 
 .violetti {
-  color: #B197FC;
+ /*  color: #887ce4; */
+ color: #B197FC;
 }
 
-.pinkki {
+.lila {
+  color: #887ce4;
+/*
   color: pink;
+  */
 }
 
 .tummanharmaa {

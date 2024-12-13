@@ -36,16 +36,38 @@ const TuuliKomponentti = ({ data }) => {
                       <h6 className="tummanharmaa"> {index===1? cell :"" } </h6>
 
                       {/* kellonaika*/}
-                      <span className="harmaa">{index===2 && (cell.endsWith("NaN")) ? cell.substring(0,5):"" }</span>
-                      <h1 class="display-4">   
+                      <span className="harmaa">{index===2 ? cell.substring(0,5):"" }</span>
+                      <h1 class="display-3">  
+
                       {/* sadeton pilvi*/}
-                      {index===2 && (cell.endsWith("NaN")) ? <i className="bi bi-cloud-check-fill pinkki" title={cell}></i>:""}   
-                      {/* ripsii*/}
-                      {index===2 && ((cell>=0 && cell<=10 )) ? <i className="bi bi-cloud-drizzle-fill pinkki" title={cell}></i>:""}
+                      {index===2 && (cell.endsWith("NaN") || (cell.substring(6,9)=='0.0')) ? <i className="bi bi-cloud-check-fill lila" title={cell}></i>:""}  
+                      
+                      {/* ripsii*/}                      
+                      {index===2 && !cell.endsWith("NaN") && ((cell.substring(6,9)=='0.1') || 
+                      (cell.substring(6,9)=='0.2') || 
+                      (cell.substring(6,9)=='0.3') ||
+                      (cell.substring(6,9)=='0.4') ||
+                      (cell.substring(6,9)=='0.5') ||
+                      (cell.substring(6,9)=='0.6') ||
+                      (cell.substring(6,9)=='0.7')||
+                      (cell.substring(6,9)=='0.8')||
+                      (cell.substring(6,9)=='0.9')) ? <i className="bi bi-cloud-drizzle-fill lila" title={cell}></i>:""}
+
                       {/* sataa*/}
-                      {index===2 && ((cell>10 && cell<20)) ? <i className="bi bi-cloud-hail-fill pinkki" title={cell}></i>:""}
+                      {index===2 && !cell.endsWith("NaN") && (
+                      (cell.substring(6,8)=='1.' ||
+                      (cell.substring(6,8)=='2.') || 
+                      (cell.substring(6,8)=='3.') || 
+                      (cell.substring(6,8)=='4.') ||
+                      (cell.substring(6,8)=='5.') ||
+                      (cell.substring(6,8)=='6.'))) ? <i className="bi bi-cloud-hail-fill lila" title={cell}></i>:""}   
+
                       {/* sataa kaatamalla*/}
-                      {index===2 && (cell<20) ? <i className="bi bi-cloud-rain-heavy-fill pinkki" title={cell}></i>:""}
+                      {index===2 && !cell.endsWith("NaN") && ((cell.substring(6,8)=='2.') || 
+                      (cell.substring(6,8)=='7.') || 
+                      (cell.substring(6,8)=='8.') ||
+                      (cell.substring(6,8)=='9.') ||
+                      (cell.substring(6,8)=='10.')) ? <i className="bi bi-cloud-rain-heavy-fill lila" title={cell}></i>:""}                               
 
                       {/* Otsikko päivämääräteksti*/}
                       {cell==='12:00'? <hr className="hr-text" data-content="12:00"></hr> : ""}

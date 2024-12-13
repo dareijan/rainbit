@@ -10,9 +10,10 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import Alert from "react-bootstrap/Alert";
 
 import TuuliKomponentti from './komponentit/TuuliKomponentti'
-const apibase =   'https://opendata.fmi.fi/wfs?service=WFS&version=2.0.0&request=getFeature&storedquery_id=fmi::forecast::edited::weather::scandinavia::point::timevaluepair&place=Jyväskylä&parameters=PrecipitationAmount'
+const apibase =   'https://opendata.fmi.fi/wfs?service=WFS&version=2.0.0&request=getFeature&storedquery_id=fmi::forecast::edited::weather::scandinavia::point::timevaluepair&place=Jyväskylä&parameters=Precipitation1h'
 
-
+//#endregion
+//const apibase =   'https://opendata.fmi.fi/wfs?service=WFS&version=2.0.0&request=getFeature&storedquery_id=fmi::forecast::edited::weather::scandinavia::point::timevaluepair&place=Jyväskylä&parameters=PrecipitationAmount'
 export default function App() {  
 
   
@@ -106,24 +107,26 @@ export default function App() {
               </div>          
             </Col>
           </Row>
+        </Container>
+      <TuuliKomponentti data={state.data} />
+      <Container>
           <Row>
             <Col md="9">
               <br />
               <div align="left">     
               <Alert key="light" variant="light" width="60%">
-                <i className="bi bi-cloud-check-fill pinkki" title="ei sada">  ei sada</i>
+                <i className="bi bi-cloud-check-fill lila" title="ei sada">  ei sada</i>
                 <br />
-                <i className="bi bi-cloud-drizzle-fill pinkki" title="ei sada">  mahdollisesti vähäistä sadetta </i>
+                <i className="bi bi-cloud-drizzle-fill lila" title="ei sada">  mahdollisesti vähäistä sadetta </i>
                 <br />
-                <i className="bi bi-cloud-hail-fill pinkki" title="ei sada"> sadetta</i><br />
-                <i className="bi bi-cloud-rain-heavy-fill pinkki" title="ei sada">  kaatosadetta</i>
+                <i className="bi bi-cloud-hail-fill lila" title="ei sada"> sadetta</i>
+                <br />
+                <i className="bi bi-cloud-rain-heavy-fill lila" title="ei sada">  kaatosadetta</i>
               </Alert>
               </div>      
             </Col>
-          </Row>          
-
+          </Row>
         </Container>
-      <TuuliKomponentti data={state.data} />
     </div>
   );
 };
