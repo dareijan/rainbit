@@ -40,11 +40,8 @@ const TuuliKomponentti = ({ data }) => {
                       <span className="harmaa">{index===2 ? cell.substring(0,5):"" }</span>
                       <h1 class="display-3">  
 
-                      {/* sadeton pilvi*/}
-                      {index===2 && (cell.endsWith("NaN") || (cell.substring(6,9)=='0.0')) ? <i className="bi bi-cloud-check-fill lila" title={cell}></i>:""}  
-                      
                       {/* ripsii*/}                      
-                      {index===2 && !cell.endsWith("NaN") && ((cell.substring(6,9)=='0.1') || 
+                      {index===2 && !cell.endsWith("NaN") && ((cell.substring(6,9)=='0.1') || (cell.substring(6,10)=='0.00') 
                       (cell.substring(6,9)=='0.2') || 
                       (cell.substring(6,9)=='0.3') ||
                       (cell.substring(6,9)=='0.4') ||
@@ -69,6 +66,10 @@ const TuuliKomponentti = ({ data }) => {
                       (cell.substring(6,8)=='8.') ||
                       (cell.substring(6,8)=='9.') ||
                       (cell.substring(6,8)=='10.')) ? <i className="bi bi-cloud-rain-heavy-fill lila" title={cell}></i>:""}                               
+
+                      {/* sadeton pilvi*/}
+                      {index===2 && (cell.endsWith("NaN") || (cell.substring(6,9)=='0.0')) ? <i className="bi bi-cloud-check-fill lila" title={cell}></i>:""}  
+                      
 
                       {/* Otsikko päivämääräteksti*/}
                       {cell==='12:00'? <hr className="hr-text" data-content="12:00"></hr> : ""}
