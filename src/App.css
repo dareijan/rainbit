@@ -88,10 +88,10 @@ hr.hr-text::before {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 h1 {
   margin-left: 10px;
 }
-
 
 img {
   width: 25px;
@@ -100,6 +100,7 @@ img {
   margin-left: 40px;
   margin-bottom: 10px;
 }
+
 i {
   margin-right: 10px;
   margin-left: 40px;
