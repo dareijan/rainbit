@@ -19,7 +19,7 @@ const apibase =   'https://opendata.fmi.fi/wfs?service=WFS&version=2.0.0&request
 export default function App() {  
 
   
-  const [saadata_1, setTuntiData1] = useState([]);
+  const [saadata1, setTuntiData1] = useState([]);
 
   const [state, setState] = useState({
     data: [],
@@ -58,17 +58,17 @@ export default function App() {
           var kellonaika = kokonainenaika[1].split(/:/);
           var kellonaika0 = kellonaika[0];
           var kellonaika1 = kellonaika[1];
-          var uusiaika = kellonaika0 + ":" + kellonaika1;
+          var aika = kellonaika0 + ":" + kellonaika1;
 
           var huomenna = 0;
           var paivamaarateksti = '';
           if(state.saadata1.length <= 20) {
 
-            if (poissuljettavat_yön_ajat.indexOf(uusiaika) < 0) {  
+            if (poissuljettavat_yön_ajat.indexOf(aika) < 0) {  
               lkm++;
               
               //päätellään milloin pitää piirtää huomisteksti
-              if(uusiaika === '07:00' && huomenna === 0) {
+              if(aika === '07:00' && huomenna === 0) {
                 const viikonpaiva = ["Sunnuntai","Maanantai","Tiistai","Keskiviikko","Torstai","Perjantai","Lauantai"];
                 const paiva = new Date(kokonainenaika[0]);
                 paivamaarateksti = viikonpaiva[paiva.getDay()];
@@ -76,9 +76,9 @@ export default function App() {
                 huomenna = 1;
               }
               if (lkm <= 20) {
-                value = uusiaika +"-"+value;
-                setState({saadata1: state.saadata1.push({uusiaika, paivamaarateksti, value})});
-                setState({data: state.data.push({uusiaika, paivamaarateksti, value})});              
+                value = aika +"-"+value;
+                setState({saadata1: state.saadata1.push({aika, paivamaarateksti, value})});
+                setState({data: state.data.push({aika, paivamaarateksti, value})});              
               }           
             }
             paivamaarateksti = '';
