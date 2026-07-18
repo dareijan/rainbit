@@ -125,8 +125,6 @@ export default function App() {
                 <i className="bi bi-cloud-hail-fill lila" title="ei sada"> sadetta</i>
                 <br />
                 <i className="bi bi-cloud-rain-heavy-fill lila" title="ei sada">  kaatosadetta</i>
-                <br />
-                <i className="haaleanharmaa">hankalasti ennustettavat on harmaalla</i>
               </Alert>
               </div>      
             </Col>

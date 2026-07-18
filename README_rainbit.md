@@ -57,7 +57,6 @@ npm run deploy
 homepage määritys oltava oikea
 
 
-
 # stillibs linkit
 
 https://coreui.io/bootstrap/docs/layout/containers/

@@ -39,7 +39,7 @@ const TuuliKomponentti = ({ data }) => {
                       {/* kellonaika*/}
                       <span className="harmaa">{index===2 ? cell.substring(0,5):"" }</span>
                       <h1 class="display-3">  
-{ console.log("mo " + cell + " " + cell.length) }
+{ console.log("cell " + cell + " length " + cell.length) }
                       {/* sumua ja pientä*/ }                      
                       {index===2 && !cell.endsWith("NaN") && ((cell.substring(6,10)==='0.00' && cell.length >= 11) ||                        
                       (cell.substring(6,10)==='0.01') || 
@@ -52,6 +52,10 @@ const TuuliKomponentti = ({ data }) => {
                       (cell.substring(6,10)==='0.08') || 
                       (cell.substring(6,10)==='0.09')) ? <i className="bi bi-cloud-fog-fill lila" title={cell} ></i>:""}
 
+										  
+																																																																																								
+					  
+																																	  
                       {index===2 && ((cell.substring(6,9)==='0.1') ||
                       (cell.substring(6,9)==='0.2') ||
                       (cell.substring(6,9)==='0.3') ||
@@ -72,11 +76,19 @@ const TuuliKomponentti = ({ data }) => {
                       (cell.substring(6,8)==='6.'))) ? <i className="bi bi-cloud-hail-fill lila" title={cell}></i>:""}   
 
                       {/* sataa kaatamalla*/}
-                      {index===2 && !cell.endsWith("NaN") && ((cell.substring(6,8)==='2.') || 
-                      (cell.substring(6,8)==='7.') || 
-                      (cell.substring(6,8)==='8.') ||
+                      {index===2 && !cell.endsWith("NaN") && ((cell.substring(6,8)==='7.') || 
+                      (cell.substring(6,8)==='8.') || 
                       (cell.substring(6,8)==='9.') ||
-                      (cell.substring(6,8)==='10.')) ? <i className="bi bi-cloud-rain-heavy-fill lila" title={cell}></i>:""}                               
+                      (cell.substring(6,8)==='10.') ||
+                      (cell.substring(6,8)==='11.') ||
+                      (cell.substring(6,8)==='12.') ||
+                      (cell.substring(6,8)==='13.') ||
+                      (cell.substring(6,8)==='14.') ||
+                      (cell.substring(6,8)==='15.') ||
+                      (cell.substring(6,8)==='16.') ||
+                      (cell.substring(6,8)==='17.') ||
+                      (cell.substring(6,8)==='18.') ||
+                      (cell.substring(6,8)==='19.')) ? <i className="bi bi-cloud-rain-heavy-fill lila" title={cell}></i>:""}                               
 
                       {/* sadeton pilvi*/}
                       {index===2 && (cell.endsWith("NaN") || (cell.substring(6,9)==='0.0' && cell.length === 9)) ? <i className="bi bi-cloud-check-fill lila" title={cell}></i>:""}  
